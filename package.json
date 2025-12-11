@@ -14,7 +14,7 @@
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "rk-design-tokens": "^1.0.45",
-    "rk-designsystem": "^1.1.46"
+    "rk-designsystem": "^1.1.49"
   },
   "devDependencies": {
     "@types/node": "^20",

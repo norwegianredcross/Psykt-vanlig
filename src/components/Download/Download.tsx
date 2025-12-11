@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Link } from 'rk-designsystem';
 import { PrinterSmallIcon } from '@navikt/aksel-icons';

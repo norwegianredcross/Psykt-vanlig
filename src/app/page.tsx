@@ -20,15 +20,23 @@ export default function Home() {
       <WhatIsTheCause />
       <IllustrationSection />
       <WhyImportant />
+      <section id="om-kurs">
       <HowItWorks />
+      </section>
       <Level0 />
       <Level1 />
       <Level2 />
       <Level3 />
       <WhyJoin />
+      <section id="for-deltakere">
       <WhatYouGet />
+      </section>
+      <section id="for-laerer">
       <WhoCanUse />
+      </section>
+      <section id="kontakt">
       <UseIt />
+      </section>
       <Download />
     </main>
   );
