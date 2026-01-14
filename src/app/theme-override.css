@@ -6,40 +6,7 @@ body {
   font-family: var(--ds-font-family);
 }
 
-/* Header z-index fix to prevent menu overlay issues */
-header[class*="Header"] {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: white;
-}
 
-/* Ensure mobile menu and dropdown menus have proper stacking */
-header[class*="Header"] nav {
-  position: relative;
-  z-index: 1001;
-}
 
-/* Mobile menu backdrop and container */
-header[class*="Header"] [class*="menu"],
-header[class*="Header"] [class*="Menu"],
-header[class*="Header"] [class*="dropdown"],
-header[class*="Header"] [class*="Dropdown"] {
-  z-index: 1002;
-}
 
-/* Ensure nav items container doesn't overflow header on mobile */
-@media (max-width: 850px) {
-  header[class*="Header"] [class*="nav"] {
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
-  
-  /* Ensure mobile menu opens below header, not over it */
-  header[class*="Header"] [class*="mobile"],
-  header[class*="Header"] [class*="Mobile"] {
-    top: 100%;
-    margin-top: 0;
-  }
-}
 
