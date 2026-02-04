@@ -10,24 +10,18 @@ export const WhoCanUse = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <h2 
+        <h2
           ref={ref}
           className={`${styles.title} ${isVisible ? styles.animate : ''}`}
         >
           👥 Hvem kan bruke det?
         </h2>
-        <div className={styles.textBlock}>
-          <ul>
-            <li>Frivillige i Røde Kors</li>
-            <li>Lærere og fagpersoner</li>
-            <li>
-              Ungdom som leder workshops for jevnaldrende
-              <br />
-              <br />
-            </li>
-          </ul>
-          <p>Du må ha gjennomført opplæring i Psykt Vanlig for å bruke opplegget.</p>
-        </div>
+        <ul className={styles.bulletList}>
+          <li>Frivillige i Røde Kors</li>
+          <li>Lærere og fagpersoner</li>
+          <li>Ungdom som leder workshops for jevnaldrende</li>
+        </ul>
+        <p className={styles.note}>Du må ha gjennomført opplæring i Psykt Vanlig for å bruke opplegget.</p>
       </div>
     </section>
   );

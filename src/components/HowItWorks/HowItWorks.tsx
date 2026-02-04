@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import { CrossCorner } from 'rk-designsystem';
 import styles from './HowItWorks.module.css';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -10,19 +10,12 @@ export const HowItWorks = () => {
 
   return (
     <section className={styles.section}>
-      <div className={styles.arrowTop}>
-        <Image 
-          src="/rightcorner.svg"
-          alt="" 
-          className={styles.arrowImage}
-          aria-hidden="true"
-          width={100}
-          height={100}
-        />
+      <div className={styles.cornerTopRight}>
+        <CrossCorner position="top-right" size="md" />
       </div>
-      
+
       <div className={styles.content}>
-        <h2 
+        <h2
           ref={ref}
           className={`${styles.title} ${isVisible ? styles.animate : ''}`}
         >
@@ -34,15 +27,8 @@ export const HowItWorks = () => {
         </p>
       </div>
 
-      <div className={styles.arrowBottom}>
-        <Image 
-          src="/rightcorner.svg" 
-          alt="" 
-          className={styles.arrowImage}
-          aria-hidden="true"
-          width={100}
-          height={100}
-        />
+      <div className={styles.cornerBottomLeft}>
+        <CrossCorner position="bottom-left" size="md" />
       </div>
     </section>
   );

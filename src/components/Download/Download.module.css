@@ -54,20 +54,10 @@
   width: 100%;
 }
 
-.arrowBottom {
-  width: 100%;
-  max-width: 1280px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 68px;
-}
-
-.arrowImage {
-  width: 46px;
-  height: 46px;
-  display: block;
-  transform: rotate(180deg);
+.cornerWrapper {
+  position: absolute;
+  bottom: 32px;
+  left: 120px;
 }
 
 /* Mobile styles */
@@ -105,15 +95,11 @@
     gap: var(--ds-size-4); /* 16px */
   }
 
-  .arrowBottom {
-    width: 100%;
-    justify-content: center;
-    height: auto;
-  }
-
-  .arrowImage {
-    width: 40px; /* Smaller arrow on mobile */
-    height: 40px;
+  .cornerWrapper {
+    bottom: 16px;
+    left: 16px;
+    transform: scale(0.6);
+    transform-origin: bottom left;
   }
 }
 

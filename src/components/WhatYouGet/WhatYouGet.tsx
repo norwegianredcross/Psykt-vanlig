@@ -10,23 +10,18 @@ export const WhatYouGet = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <h2 
+        <h2
           ref={ref}
           className={`${styles.title} ${isVisible ? styles.animate : ''}`}
         >
-          🌈 Hva kan du få ut av det?
+          🌈  Hva får du med deg?
         </h2>
-        <div className={styles.textBlock}>
-          <p>Etter å ha deltatt i PsyktVanlig-workshopen, vil du:</p>
-          <div className={styles.bulletList}>
-            <p>Ha konkrete verktøy for å håndtere stress og følelsesmessige utfordringer</p>
-            <p>Kjenne deg tryggere i møte med egne og andres reaksjoner</p>
-            <p>Forstå at psykisk helse er noe vi alle har og kan styrke</p>
-            <p>Oppleve fellesskap og gjenkjennelse i møte med andre deltagere</p>
-          </div>
-          <p>&nbsp;</p>
-          <p>Dette kurset er ikke terapi – men det kan være starten på en ny måte å møte deg selv og livet på.</p>
-        </div>
+        <ul className={styles.bulletList}>
+          <li>Verktøy for å håndtere stress og følelser</li>
+          <li>Mer trygghet – både med deg selv og sammen med andre</li>
+          <li>Innsikt i at psykisk helse er noe vi alle har</li>
+          <li>Nye måter å møte utfordringer i hverdagen</li>
+        </ul>
       </div>
     </section>
   );

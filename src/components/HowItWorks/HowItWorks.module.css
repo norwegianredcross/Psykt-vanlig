@@ -46,7 +46,7 @@
   height: 128px;
 }
 
-.arrowTop {
+.cornerTopRight {
   width: 100%;
   max-width: 1280px;
   display: flex;
@@ -54,22 +54,12 @@
   align-items: flex-start;
 }
 
-.arrowBottom {
+.cornerBottomLeft {
   width: 100%;
   max-width: 1280px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-.arrowImage {
-  width: 68px;
-  height: 68px;
-  display: block;
-}
-
-.arrowBottom .arrowImage {
-  transform: rotate(180deg);
 }
 
 .desktopTitle {
@@ -87,19 +77,18 @@
     align-items: flex-start; /* Left-align on mobile */
   }
 
-  .arrowTop {
+  .cornerTopRight {
     width: 100%;
     justify-content: flex-end;
+    transform: scale(0.6);
+    transform-origin: top right;
   }
 
-  .arrowBottom {
+  .cornerBottomLeft {
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .arrowImage {
-    width: 40px; /* Smaller arrows on mobile */
-    height: 40px;
+    transform: scale(0.6);
+    transform-origin: bottom left;
   }
 
   .content {

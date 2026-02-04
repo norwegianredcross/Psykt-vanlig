@@ -1,10 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Link } from 'rk-designsystem';
+import { Link, CrossCorner } from 'rk-designsystem';
 import { PrinterSmallIcon } from '@navikt/aksel-icons';
 import styles from './Download.module.css';
-import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const Download = () => {
@@ -43,15 +42,8 @@ export const Download = () => {
         </div>
       </div>
 
-      <div className={styles.arrowBottom}>
-        <Image
-          src="/rightcorner.svg"
-          alt=""
-          className={styles.arrowImage}
-          width={46}
-          height={46}
-          aria-hidden="true"
-        />
+      <div className={styles.cornerWrapper}>
+        <CrossCorner position="bottom-left" size="md" />
       </div>
     </section>
   );

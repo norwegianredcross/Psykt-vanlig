@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Textfield, Button } from 'rk-designsystem';
+import { Textfield, Button, CrossCorner } from 'rk-designsystem';
 import styles from './UseIt.module.css';
-import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export const UseIt = () => {
@@ -18,15 +17,8 @@ export const UseIt = () => {
 
   return (
     <section className={styles.section}>
-      <div className={styles.arrowTop}>
-        <Image
-          src="/rightcorner.svg"
-          alt=""
-          className={styles.arrowImage}
-          width={68}
-          height={68}
-          aria-hidden="true"
-        />
+      <div className={styles.cornerWrapper}>
+        <CrossCorner position="top-right" size="md" />
       </div>
 
       <div className={styles.content}>
@@ -51,7 +43,7 @@ export const UseIt = () => {
             className={styles.textfield}
           />
           <Button type="submit" variant="primary" className={styles.button}>
-            Send
+            SEND
           </Button>
         </form>
       </div>

@@ -13,7 +13,7 @@ export const Level0 = () => {
     <section className={styles.section}>
       <div className={styles.content}>
         <div className={styles.textBlock}>
-          <h2 
+          <h2
             ref={headingRef}
             className={`${styles.title} ${headingVisible ? styles.animate : ''}`}
           >
@@ -25,24 +25,24 @@ export const Level0 = () => {
           <div className={styles.description}>
             <p>På dette nivået lærer du:</p>
             <ul>
-              <li>
-                Start med bli-kjent-leker og energizers. Her bygger vi trygghet og fellesskap.
-              </li>
+              <li>Skaper vi et trygt rom gjennom å gjøre bli kjent-leker og energizer</li>
+              <li>Du blir bedre kjent med de andre deltakerne</li>
+              <li>Vi blir enige om regler</li>
+              <li>Du blir bedre kjent med egen komfortsone og får varmet opp før vi går i gang med de andre nivåene</li>
             </ul>
           </div>
         </div>
-        
-        <div 
+
+        <div
           ref={illustrationRef}
           className={`${styles.illustrationBlock} ${illustrationVisible ? styles.animate : ''}`}
         >
-          <Image 
-            src="/Illustrationblock.png" 
-            alt="" 
+          <Image
+            src="/nivå-0-illustration.svg"
+            alt="Illustrasjon som viser tre nivåer: Leve med seg selv, Å leve med andre, og Å leve i samfunnet"
             className={styles.illustrationImage}
-            aria-hidden="true"
-            width={600}
-            height={400}
+            width={500}
+            height={500}
           />
         </div>
       </div>

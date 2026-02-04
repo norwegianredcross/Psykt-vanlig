@@ -10,19 +10,17 @@ export const WhyJoin = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <h2 
+        <h2
           ref={ref}
           className={`${styles.title} ${isVisible ? styles.animate : ''}`}
         >
           🫂 Hvorfor bli med?
         </h2>
-        <div className={styles.description}>
-          <ul>
-            <li>Du får et trygt sted der det er lov å snakke om ting som betyr noe for deg.</li>
-            <li>Du lærer ting som gjør livet litt enklere og mer meningsfylt.</li>
-            <li>Du møter andre som vil ha et åpent og inkluderende miljø.</li>
-          </ul>
-        </div>
+        <ul className={styles.bulletList}>
+          <li>Et trygt sted der du kan være deg selv</li>
+          <li>Ærlige samtaler om ting som betyr noe</li>
+          <li>Et fellesskap med folk som vil ha et åpent og inkluderende miljø</li>
+        </ul>
       </div>
     </section>
   );

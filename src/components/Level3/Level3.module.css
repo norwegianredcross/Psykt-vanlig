@@ -23,8 +23,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--ds-size-12);
-  align-items: flex-end;
-  text-align: right;
+  align-items: flex-start;
+  text-align: left;
   flex: 1;
   opacity: 0;
   transform: translateX(-50px);
@@ -52,7 +52,7 @@
   line-height: 1.5;
   margin: 0;
   width: 585px;
-  text-align: right;
+  text-align: left;
 }
 
 .description p {
@@ -63,13 +63,13 @@
   margin-top: 0;
   padding-left: 0;
   list-style: disc;
-  text-align: right;
+  text-align: left;
 }
 
 .description li {
   margin-left: 31.5px;
   margin-bottom: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .description li:last-child {
@@ -78,10 +78,10 @@
 
 .illustrationBlock {
   position: relative;
-  width: 511px;
-  height: 516px;
   flex-shrink: 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -93,26 +93,19 @@
 }
 
 .illustrationImage {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+  width: auto;
+  height: 500px;
+  max-width: none;
   display: block;
 }
 
-.arrowBottom {
+.cornerWrapper {
   width: 100%;
   max-width: 1280px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: var(--ds-size-8);
-}
-
-.arrowImage {
-  width: 68px;
-  height: 68px;
-  display: block;
-  transform: rotate(180deg);
 }
 
 .desktopTitle {
@@ -128,36 +121,40 @@
   .section {
     flex-direction: column;
   }
-  
+
   .content {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .textBlock {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
-  
+
   .description {
     width: 100%;
     max-width: 585px;
-    text-align: center;
+    text-align: left;
   }
-  
+
   .description ul {
-    text-align: center;
+    text-align: left;
   }
-  
+
   .description li {
-    text-align: center;
+    text-align: left;
   }
-  
+
   .illustrationBlock {
     width: 100%;
-    max-width: 511px;
+    max-width: 500px;
+  }
+
+  .illustrationImage {
+    width: 100%;
     height: auto;
-    min-height: 516px;
+    max-width: 100%;
   }
 }
 
@@ -221,17 +218,16 @@
   }
 
   .illustrationImage {
+    width: 100%;
+    height: auto;
     max-width: 100%;
   }
 
-  .arrowBottom {
+  .cornerWrapper {
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .arrowImage {
-    width: 40px; /* Smaller arrow on mobile */
-    height: 40px;
+    transform: scale(0.6);
+    transform-origin: bottom left;
   }
 }
 

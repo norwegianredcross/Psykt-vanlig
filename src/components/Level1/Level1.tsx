@@ -25,9 +25,9 @@ export const Level1 = () => {
           <div className={styles.description}>
             <p>På dette nivået lærer du:</p>
             <ul>
-              <li>Hva følelserer og hva de forteller oss</li>
+              <li>Hva følelser er og hva de forteller oss</li>
               <li>Hvordan du kan bli mentalt sterk ved å møte dine egne følelser med forståelse og vennlighet.</li>
-              <li>Å bli tryggerepå deg selv og kroppen din.</li>
+              <li>Å bli tryggere på deg selv og kroppen din.</li>
               <li>Hvorfor det er viktig å gjøre feil –og hvordan du lærer av det.</li>
             </ul>
           </div>
@@ -37,13 +37,12 @@ export const Level1 = () => {
           ref={illustrationRef}
           className={`${styles.illustrationBlock} ${illustrationVisible ? styles.animate : ''}`}
         >
-          <Image 
-            src="/illustrationblock2.png" 
-            alt="" 
+          <Image
+            src="/niva-1-illustration.svg"
+            alt="Leve med seg selv - illustrasjon av person som mediterer"
             className={styles.illustrationImage}
-            aria-hidden="true"
-            width={600}
-            height={400}
+            width={500}
+            height={500}
           />
         </div>
       </div>

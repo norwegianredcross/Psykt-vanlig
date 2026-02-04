@@ -6,6 +6,7 @@ import '@digdir/designsystemet-css/index.css';
 
 import "./theme-override.css";
 import { HeaderWrapper } from "@/components/HeaderWrapper";
+import { FooterWrapper } from "@/components/FooterWrapper";
 
 const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body>
         <HeaderWrapper />
         {children}
+        <FooterWrapper />
       </body>
     </html>
   );

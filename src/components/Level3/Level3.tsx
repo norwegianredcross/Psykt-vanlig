@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { CrossCorner } from 'rk-designsystem';
 import styles from './Level3.module.css';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -12,7 +13,7 @@ export const Level3 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.content}>
-        <div 
+        <div
           ref={textRef}
           className={`${styles.textBlock} ${textVisible ? styles.animate : ''}`}
         >
@@ -27,19 +28,19 @@ export const Level3 = () => {
             <ul>
               <li>Hva stereotypier og fordommer er</li>
               <li>Hvorfor vi alle trenger å høre til, og hvordan du kan bidra til at andre føler seg inkludert</li>
-              <li>Hvordan gruppepressfunker –og hvordan du kan stå imot.</li>
+              <li>Hvordan gruppe press funker –og hvordan du kan stå imot.</li>
               <li>Hvordan sosiale medier påvirker deg, og hvordan du kan bruke dem på en sunn måte.</li>
             </ul>
           </div>
         </div>
-        
-        <div 
+
+        <div
           ref={illustrationRef}
           className={`${styles.illustrationBlock} ${illustrationVisible ? styles.animate : ''}`}
         >
-          <Image 
-            src="/illustrationblock4.png" 
-            alt="" 
+          <Image
+            src="/illustrationblock4.png"
+            alt=""
             className={styles.illustrationImage}
             aria-hidden="true"
             width={600}
@@ -47,16 +48,9 @@ export const Level3 = () => {
           />
         </div>
       </div>
-      
-      <div className={styles.arrowBottom}>
-        <Image 
-          src="/rightcorner.svg" 
-          alt="" 
-          className={styles.arrowImage}
-          aria-hidden="true"
-          width={68}
-          height={68}
-        />
+
+      <div className={styles.cornerWrapper}>
+        <CrossCorner position="bottom-left" size="md" />
       </div>
     </section>
   );

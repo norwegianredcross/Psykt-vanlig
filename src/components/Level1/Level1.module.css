@@ -73,10 +73,10 @@
 
 .illustrationBlock {
   position: relative;
-  width: 491px;
-  height: 448px;
   flex-shrink: 0;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -88,9 +88,9 @@
 }
 
 .illustrationImage {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+  width: auto;
+  height: 500px;
+  max-width: none;
   display: block;
 }
 
@@ -124,9 +124,14 @@
   }
   
   .illustrationBlock {
-    max-width: 491px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .illustrationImage {
+    width: 100%;
     height: auto;
-    min-height: 448px;
+    max-width: 100%;
   }
 }
 
@@ -187,6 +192,8 @@
   }
 
   .illustrationImage {
+    width: 100%;
+    height: auto;
     max-width: 100%;
   }
 }

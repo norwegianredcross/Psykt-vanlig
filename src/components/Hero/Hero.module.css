@@ -1,84 +1,63 @@
 .hero {
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--ds-size-26) var(--ds-size-30); /* 104px vertical, 120px horizontal */
+  padding: var(--ds-size-30) var(--ds-size-30); /* 120px vertical, 120px horizontal */
   background-color: var(--ds-color-info-surface-hover);
   overflow: hidden;
   text-align: center;
   color: var(--ds-color-neutral-text-default);
-  gap: var(--ds-size-8); /* 32px gap between content and arrow */
-}
-
-.background {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.background > :first-child {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.backgroundImage {
-  width: 100%;
-  height: 100%;
-  max-width: 1980px;
-  object-fit: cover;
-  object-position: center center;
-  opacity: 0.2;
-  margin: 0 auto;
+  gap: var(--ds-size-10); /* 40px gap between content and red cross */
 }
 
 .content {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1280px;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: var(--ds-size-6); /* 24px */
 }
 
 .title {
   font-family: var(--ds-font-family);
   font-weight: 700; /* Bold */
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1.3;
+  letter-spacing: -0.6px;
   margin: 0;
+  width: 100%;
 }
 
 .subtitle {
   font-family: var(--ds-font-family);
-  font-weight: 500; /* Medium */
+  font-weight: 400; /* Regular */
   font-size: 30px;
   line-height: 1.3;
+  letter-spacing: -0.15px;
   margin: 0;
+  width: 100%;
+  max-width: 550px;
 }
 
 .textBlock {
   font-family: var(--ds-font-family);
   font-weight: 400; /* Regular */
-  font-size: 21px;
+  font-size: 18px;
   line-height: 1.5;
+  letter-spacing: 0.09px;
   display: flex;
   flex-direction: column;
-  gap: 0; /* Figma had margin-bottom: 0 on paragraphs, let's keep it tight or check standard */
+  width: 100%;
+  gap: 0;
 }
 
 .textBlock p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .desktopText {
@@ -93,110 +72,132 @@
   font-weight: 700;
 }
 
-.arrow {
-  position: relative;
+/* Brain illustration - top left */
+.brainIllustration {
+  position: absolute;
+  top: 80px;
+  left: 280px;
+  width: 180px;
+  height: auto;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: var(--ds-size-2); /* 8px */
-  padding-bottom: var(--ds-size-0); /* 0px */
-  padding-left: var(--ds-size-1); /* 4px */
-  padding-right: var(--ds-size-1); /* 4px */
-  width: 56.569px;
-  height: 56.569px;
+  pointer-events: none;
 }
 
-.arrow img {
+.brainImage {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
-.brainIllustration {
-  display: none;
-}
-
+/* Surf illustration - bottom right */
 .surfIllustration {
-  display: none;
+  position: absolute;
+  bottom: 100px;
+  right: 280px;
+  width: 220px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.brainImage,
 .surfImage {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Red cross icon */
+.redCross {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+}
+
+.redCross svg {
+  transform: rotate(135deg);
+  width: 68px;
+  height: 68px;
+}
+
+/* Tablet styles - hide illustrations when they would overlap content */
+@media (max-width: 1100px) {
+  .brainIllustration {
+    display: none;
+  }
+
+  .surfIllustration {
+    display: none;
+  }
+}
+
 /* Mobile styles */
 @media (max-width: 850px) {
   .hero {
-    padding: var(--ds-size-30) var(--ds-size-4); /* 120px vertical, 16px horizontal */
+    padding: var(--ds-size-26) var(--ds-size-4); /* 104px vertical, 16px horizontal */
+  }
+
+  .content {
+    max-width: 100%;
+    gap: var(--ds-size-5); /* 20px */
   }
 
   .title {
-    color: var(--ds-color-neutral-text-default, #2B2B2B);
-    text-align: center;
-    font-family: var(--ds-font-family, "Source Sans Pro");
     font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.36px;
   }
 
   .subtitle {
-    color: var(--ds-color-neutral-text-default, #2B2B2B);
-    text-align: center;
-    font-family: var(--ds-font-family, "Source Sans Pro");
-    font-size: 30px; /* var(--font-size-7, 30px) */
-    font-style: normal;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 130%; /* 39px */
-    letter-spacing: -0.075px;
+    line-height: 1.3;
+    letter-spacing: -0.12px;
+    max-width: 100%;
   }
 
   .textBlock {
-    font-size: 18px; /* Smaller text on mobile - font-size/4 */
+    font-size: 18px;
     letter-spacing: 0.09px;
   }
 
   .desktopText {
-    display: none; /* Hide desktop paragraphs on mobile */
+    display: none;
   }
 
   .mobileText {
-    display: block; /* Show single paragraph on mobile */
-  }
-
-  .textBlock .bold {
-    font-weight: 400; /* Regular weight on mobile, not bold */
-  }
-
-
-  .content {
-    max-width: 650px; /* Same max-width as desktop */
+    display: block;
   }
 
   .brainIllustration {
     display: block;
     position: absolute;
-    top: -17.25px;
+    top: 16px;
     left: 0;
-    width: 150px;
-    height: 146px;
-    z-index: 1;
-    pointer-events: none;
+    width: 120px;
+    height: auto;
   }
 
   .surfIllustration {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 16px;
     right: 0;
-    width: 191px;
-    height: 127px;
-    z-index: 1;
-    pointer-events: none;
+    width: 150px;
+    height: auto;
+  }
+
+  .redCross {
+    width: 60px;
+    height: 60px;
+  }
+
+  .redCross svg {
+    width: 48px;
+    height: 48px;
   }
 }
-

@@ -25,9 +25,9 @@ export const Level2 = () => {
           <div className={styles.description}>
             <p>På dette nivået lærer du:</p>
             <ul>
-              <li>Å fortelle andre hva du følerog trenger,så andre skjønner deg.</li>
-              <li>Å lyttepå en måte som viser at du bryr deg.</li>
-              <li>Å bli tryggerepå deg selv og kroppen din.</li>
+              <li>Å fortelle andre hva du føler og trenger, så andre skjønner deg.</li>
+              <li>Å lytte på en måte som viser at du bryr deg.</li>
+              <li>Å bli tryggere på deg selv og kroppen din.</li>
             </ul>
           </div>
         </div>

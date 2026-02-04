@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero/Hero";
 import { WhatIsTheCause } from "@/components/WhatIsTheCause/WhatIsTheCause";
 import { IllustrationSection } from "@/components/IllustrationSection/IllustrationSection";
+import { RealitySection } from "@/components/RealitySection/RealitySection";
 import { WhyImportant } from "@/components/WhyImportant/WhyImportant";
 import { HowItWorks } from "@/components/HowItWorks/HowItWorks";
 import { Level0 } from "@/components/Level0/Level0";
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <WhatIsTheCause />
       <IllustrationSection />
+      <RealitySection />
       <WhyImportant />
       <section id="om-kurs">
       <HowItWorks />

@@ -17,7 +17,7 @@ export const WhatIsTheCause = () => {
           🤔 Hva er Psykt vanlig?
         </h2>
         <p className={styles.text}>
-          Psykt vanlig er et workshopopplegg for ungdom 13- 25 år hvor vi gjør øvelser, snakker sammen og beveger oss og lærer mer om blant annet følelser, hvordan styrke selvfølelsen, identitet, hvordan løse konflikter med andre, sosiale medier og inkludering.
+          Psykt vanlig er for deg mellom 13 og 25 år, og tar opp temaer mange unge kjenner på: vennskap, press, stress, selvfølelse, grenser, identitet og psykisk helse i en digital hverdag. Workshopene er lavterskel og foregår i et trygt og inkluderende rom. Du velger selv hvor mye du vil dele, og det er helt greit å bare lytte. Det finnes ingen riktige eller gale svar.
         </p>
       </div>
     </section>
